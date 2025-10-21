@@ -12,7 +12,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000",
+        url: "https://safekey-api-a1bd9aa97953.herokuapp.com",
         description: "Servidor Local",
       },
     ],
@@ -24,7 +24,9 @@ const swaggerSpec = swaggerJsdoc(options);
 
 function setupSwagger(app) {
   app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-  console.log("📚 Swagger disponível em: http://localhost:3000/docs");
+  console.log(
+    "📚 Swagger disponível em: https://safekey-api-a1bd9aa97953.herokuapp.com/docs"
+  );
 }
 
 module.exports = setupSwagger;
